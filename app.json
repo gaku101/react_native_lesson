@@ -3,6 +3,7 @@
     "name": "react_native_lesson",
     "slug": "react_native_lesson",
     "version": "1.0.0",
+    "privacy": "unlisted",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
