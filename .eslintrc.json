@@ -21,7 +21,18 @@
     "rules": {
         "no-use-before-define": 0,
         "semi": [
-            "never"
+            "off"
+        ],
+        "quotes": "off",
+        "jsx-quotes": [
+            "error",
+            "prefer-single"
+        ],
+        "object-curly-newline": [
+            "error",
+            {
+                "ImportDeclaration": "never"
+            }
         ]
     }
 }
