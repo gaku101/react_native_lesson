@@ -1,5 +1,11 @@
 import React from "react"
-import { View, Text, TextInput, StyleSheet } from "react-native"
+import {
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native"
 
 import AppBar from "../components/AppBar"
 import Button from "../components/Button"
@@ -10,12 +16,14 @@ export default function SignUpScreen() {
       <AppBar />
       <View style={styles.inner}>
         <Text style={styles.title}>Sign Up</Text>
-        <TextInput style={styles.input} value='Email Address'></TextInput>
-        <TextInput style={styles.input} value='password'></TextInput>
+        <TextInput style={styles.input} value='Email Address' />
+        <TextInput style={styles.input} value='password' />
         <Button label='Submit' />
         <View style={styles.footer}>
           <Text style={styles.footerText}>Already registered?</Text>
-          <Text style={styles.footerLink}>Log In.</Text>
+          <TouchableOpacity>
+            <Text style={styles.footerLink}>Log In.</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>

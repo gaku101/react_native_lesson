@@ -29,6 +29,7 @@
             "prefer-single"
         ],
         "object-curly-newline": [
+            "off",
             {
                 "ImportDeclaration": "never"
             }
