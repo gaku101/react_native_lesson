@@ -41,6 +41,9 @@
                     "navigation"
                 ]
             }
+        ],
+        "react/no-unstable-nested-components": [
+            "off"
         ]
     }
 }
