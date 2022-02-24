@@ -33,6 +33,14 @@
             {
                 "ImportDeclaration": "never"
             }
+        ],
+        "react/prop-types": [
+            "error",
+            {
+                "ignore": [
+                    "navigation"
+                ]
+            }
         ]
     }
 }
