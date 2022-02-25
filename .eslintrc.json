@@ -47,6 +47,7 @@
         ],
         "comma-dangle": [
             "off"
-        ]
+        ],
+        "import/prefer-default-export": 0
     }
 }
