@@ -44,6 +44,9 @@
         ],
         "react/no-unstable-nested-components": [
             "off"
+        ],
+        "comma-dangle": [
+            "off"
         ]
     }
 }
