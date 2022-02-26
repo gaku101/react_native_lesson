@@ -9,11 +9,13 @@ import {
 } from "react-native"
 import firebase from "firebase"
 import Button from "../components/Button"
+import Loading from "../components/Loading"
 
 export default function LogInScreen(props) {
   const { navigation } = props
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [isLoading, setLoading] = useState(true)
 
   useEffect(() => {
     const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
@@ -22,12 +24,15 @@ export default function LogInScreen(props) {
           index: 0,
           routes: [{ name: "MemoList" }],
         })
+      } else {
+        setLoading(false)
       }
     })
     return unsubscribe // この画面がアンマウントされる瞬間にreturn以下の処理を実行ï
   }, [])
 
   const handlePress = () => {
+    setLoading(true)
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
@@ -42,10 +47,14 @@ export default function LogInScreen(props) {
       .catch((error) => {
         Alert.alert(error.code)
       })
+      .then(() => {
+        setLoading(false)
+      })
   }
 
   return (
-    <View>
+    <View style={styles.container}>
+      <Loading isLoading={isLoading} />
       <View style={styles.inner}>
         <Text style={styles.title}>Log In</Text>
         <TextInput
