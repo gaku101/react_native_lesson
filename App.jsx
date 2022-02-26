@@ -5,6 +5,7 @@ import {
   CardStyleInterpolators,
 } from "@react-navigation/stack"
 import firebase from "firebase"
+import { LogBox } from "react-native"
 
 import LogInScreen from "./src/screens/LogInScreen"
 import SignUpScreen from "./src/screens/SignUpScreen"
@@ -21,6 +22,7 @@ if (firebase.apps.length === 0) {
 }
 
 const Stack = createStackNavigator()
+LogBox.ignoreLogs([''])
 
 export default function App() {
   return (
